@@ -33,4 +33,12 @@ Especifica que a esteira deve ser acionada em push ou pull request na branch mai
 Define um job chamado build que roda em um ambiente ubuntu-latest.
 Realiza checkout do código, configura o Python, instala dependências e executa os testes.
 
+Realizado Teste unitário
 
+Criado arquivo para teste de integração: test_integration.py
+Contém o teste de integração que verifica a resposta real da API ViaCEP
+
+Configurado o GitHub Actions: github/workflows/ci-cd.yml
+Configura o GitHub Actions para rodar a esteira de CI/CD
+build-and-test: Job para instalar dependências, rodar testes unitários e de integração.
+deploy: Job para deploy, que depende da conclusão bem-sucedida do job build-and-test.
